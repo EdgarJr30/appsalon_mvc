@@ -10,8 +10,6 @@ class APIController {
     public static function index() {
         $servicios = Servicio::all();
         echo json_encode($servicios);
-        echo json_last_error_msg(); // Print out the error if any
-        die(); // halt the script
     }
 
     public static function guardar() {
