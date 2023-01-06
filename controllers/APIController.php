@@ -21,7 +21,7 @@ class APIController {
         $id = $resultado['id'];
 
         //Almacena los servicios con el id de la cita
-        $idServicios = explode(",", $_POST['servicios']);
+        $idServicios = explode(",", $_POST['servicios'], JSON_UNESCAPED_UNICODE);
         foreach ($idServicios as $idServicio) {
             $args = [
                 'citaId' => $id,
